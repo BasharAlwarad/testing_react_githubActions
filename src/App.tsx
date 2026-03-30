@@ -38,6 +38,7 @@ const products: CartItem[] = [
 const App = () => {
   return (
     <CartProvider>
+      <nav>im a nav</nav>
       <div className="container mx-auto">
         <CartBadge />
         <div className="flex flex-wrap gap-5 mt-5">
