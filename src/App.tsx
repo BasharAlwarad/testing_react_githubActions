@@ -46,6 +46,7 @@ const App = () => {
           ))}
         </div>
       </div>
+      <div>im a footer</div>
     </CartProvider>
   );
 };
