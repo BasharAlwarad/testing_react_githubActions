@@ -1,1 +1,1 @@
-# testing_react_githubActions
+# Starter for Integration Testing (Frontend)
