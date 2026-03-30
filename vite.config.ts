@@ -7,9 +7,11 @@ import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
+const basePath = process.env.VITE_BASE_PATH || '/';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: basePath,
   resolve: {
     alias: {
       '@': resolve(__dirname, './src'),
@@ -19,7 +21,7 @@ export default defineConfig({
   test: {
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'text-summary', 'html', 'json-summary'],
+      reporter: ['text', 'json', 'html'],
       reportsDirectory: './coverage',
       include: ['src/**/*.{ts,tsx}'],
       exclude: [
@@ -32,7 +34,7 @@ export default defineConfig({
       thresholds: {
         lines: 80,
         functions: 80,
-        branches: 70,
+        branches: 80,
         statements: 80,
       },
     },
